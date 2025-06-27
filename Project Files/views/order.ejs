@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Orders</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    a.back-link {
+      display: inline-block;
+      margin-bottom: 20px;
+      text-decoration: none;
+      background: #555;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 4px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      background: white;
+      padding: 16px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    li strong {
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 15px;
+      }
+
+      li {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Your Orders</h2>
+  <a href="/books" class="back-link">← Back to Books</a>
+
+  <ul>
+    <% orders.forEach(order => { %>
+      <li>
+        <strong><%= order.bookId.title %></strong> - ₹<%= order.bookId.price %><br />
+        Status: <%= order.status %><br />
+        Ordered on: <%= order.createdAt.toDateString() %>
+      </li>
+    <% }) %>
+  </ul>
+
+</body>
+</html>

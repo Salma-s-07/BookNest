@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BookNest - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #333;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 70px 10px 50px;
+      background: #e27979;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 30px;
+    }
+
+    .hero img {
+      width: 50px;
+     
+    }
+
+    .btn-group a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    .login-btn {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .login-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .signup-btn {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .signup-btn:hover {
+      background-color: #1e7e34;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      padding: 50px 20px;
+      background: #f0f2f5;
+      text-align: center;
+    }
+
+    .feature-box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .feature-box h3 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .feature-box p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    footer {
+      padding: 20px;
+      background: #222;
+      color: #aaa;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png" alt="BookNest logo" />
+    <h1>Welcome to BookNest</h1>
+    <p>Discover, buy, or sell books effortlessly. A nest for every book lover.</p>
+    <div class="btn-group">
+      <a href="/login" class="login-btn">Login</a>
+      <a href="/signup" class="signup-btn">Sign Up</a>
+    </div>
+    <% if (user) { %>
+      <p style="margin-top: 20px;">Logged in as <strong><%= user.name %></strong>. <a href="/books">Go to Books</a></p>
+    <% } %>
+  </div>
+
+  <div class="features">
+    <div class="feature-box">
+      <h3>Vast Book Collection</h3>
+      <p>Browse through thousands of books across genres, handpicked for every reader.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Sell Your Books</h3>
+      <p>Have books lying unused? Become a seller and earn while helping others read.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Admin Control</h3>
+      <p>Admins can manage users and books to maintain a smooth and safe platform.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Secure Orders</h3>
+      <p>Track orders, view history, and experience safe and reliable transactions.</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 BookNest. Built with ❤️ for readers.
+  </footer>
+
+</body>
+</html>
