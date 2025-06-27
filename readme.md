@@ -35,6 +35,7 @@ BookNest is an online bookstore web application built using **Node.js**, **Expre
 - **Styling:** CSS / Bootstrap
 
 ---
+## 🎥Demo Video: https://drive.google.com/file/d/1EoYCwx5ZolnbXzXHk7-qv5NrYurK3jEP/view?usp=sharing
 
 ## 📂 Project Structure (Generated via Express Generator)
 
